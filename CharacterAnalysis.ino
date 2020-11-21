@@ -1,3 +1,6 @@
+
+#include <OneWire.h>
+//#include <DallasTemperature.h>
 /*
   Character analysis operators
 
@@ -10,7 +13,7 @@
 
   This example code is in the public domain.
 */
-
+#include <MicroView.h>
 void setup()
 {
 	// initialize digital pin LED_BUILTIN as an output.
