@@ -12,6 +12,8 @@
   by Tom Igoe
 
   This example code is in the public domain.
+  Added printing in HEX and Binary - 25 March 2021
+  Also changed it's to it is and that's to that is
 */
 #include <MicroView.h>
 void setup()
@@ -46,51 +48,56 @@ void loop()
 		Serial.print("You sent me: \'");
 		Serial.write(thisChar);
 		Serial.print("\'  ASCII Value: ");
-		Serial.println(thisChar);
+    Serial.println(thisChar);
+    Serial.print("              ASCII HEX Value: ");
+    Serial.println(thisChar,HEX);
+    Serial.print("              ASCII BIN Value: ");
+    Serial.println(thisChar,BIN);
+//		Serial.println(thisChar);
 
 		// analyze what was sent:
 		if (isAlphaNumeric(thisChar)) {
-			Serial.println("it's alphanumeric");
+			Serial.println("it is alphanumeric");
 		}
 		if (isAlpha(thisChar)) {
-			Serial.println("it's alphabetic");
+			Serial.println("it is alphabetic");
 		}
 		if (isAscii(thisChar)) {
-			Serial.println("it's ASCII");
+			Serial.println("it is ASCII");
 		}
 		if (isWhitespace(thisChar)) {
-			Serial.println("it's whitespace");
+			Serial.println("it is whitespace");
 		}
 		if (isControl(thisChar)) {
-			Serial.println("it's a control character");
+			Serial.println("it is a control character");
 		}
 		if (isDigit(thisChar)) {
-			Serial.println("it's a numeric digit");
+			Serial.println("it is a numeric digit");
 		}
 		if (isGraph(thisChar)) {
 			Serial.
 			    println
-			    ("it's a printable character that's not whitespace");
+			    ("it is a printable character that is not whitespace");
 		}
 		if (isLowerCase(thisChar)) {
-			Serial.println("it's lower case");
+			Serial.println("it is lower case");
 		}
 		if (isPrintable(thisChar)) {
-			Serial.println("it's printable");
+			Serial.println("it is printable");
 		}
 		if (isPunct(thisChar)) {
-			Serial.println("it's punctuation");
+			Serial.println("it is punctuation");
 		}
 		if (isSpace(thisChar)) {
-			Serial.println("it's a space character");
+			Serial.println("it is a space character");
 		}
 		if (isUpperCase(thisChar)) {
-			Serial.println("it's upper case");
+			Serial.println("it is upper case");
 		}
 		if (isHexadecimalDigit(thisChar)) {
 			Serial.
 			    println
-			    ("it's a valid hexadecimaldigit (i.e. 0 - 9, a - F, or A - F)");
+			    ("it is a valid hexadecimaldigit (i.e. 0 - 9, a - F, or A - F)");
 		}
 		// add some space and ask for another byte:
 		Serial.println();
