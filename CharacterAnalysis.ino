@@ -45,14 +45,19 @@ void loop()
 		int thisChar = Serial.read();
 
 		// say what was sent:
-		Serial.print("You sent me: \'");
+		Serial.println("You sent me: \'");
 		Serial.write(thisChar);
-		Serial.print("\'  ASCII Value: ");
+		Serial.print("\'            ASCII Value: ");
     Serial.println(thisChar);
+    
     Serial.print("              ASCII HEX Value: ");
     Serial.println(thisChar,HEX);
+    
     Serial.print("              ASCII BIN Value: ");
     Serial.println(thisChar,BIN);
+    
+    Serial.print("              ASCII OCT Value: ");
+    Serial.println(thisChar,OCT);
 //		Serial.println(thisChar);
 
 		// analyze what was sent:
