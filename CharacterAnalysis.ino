@@ -1,5 +1,5 @@
 
-#include <OneWire.h>
+//#include <OneWire.h>
 //#include <DallasTemperature.h>
 /*
   Character analysis operators
@@ -15,7 +15,7 @@
   Added printing in HEX and Binary - 25 March 2021
   Also changed it's to it is and that's to that is
 */
-#include <MicroView.h>
+//#include <MicroView.h>
 void setup()
 {
 	// initialize digital pin LED_BUILTIN as an output.
